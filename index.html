@@ -7,14 +7,22 @@
     <script src="js/aframe-0.5.0/aframe-0.5.0.min.js"></script>
   </head>
   <body>
+  <script>
+    AFRAME.registerComponent('log', {
+      schema: {type: 'string'},
+      init: function () {
+        let stringToLog = this.data;
+        console.log(stringToLog);
+      }
+    });
+
+  </script>
   <a-scene background="color: red" transparent="true">
     <a-assets>
       <img id="boxTexture" src="res/img/background.jpg">
       <img id="skyTexture"
            src="res/img/sechelt.jpg">
       <img id="groundTexture" src="res/img/floor.jpg">
-      <audio id="soundAudio" src="res/snd/backgroundnoise.wav" autoplay
-             preload loop></audio>
     </a-assets>
     <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
       <a-animation attribute="position" to="0 4 -5" direction="alternate" dur="2000"
@@ -26,12 +34,12 @@
     <a-light type="ambient" color="#445451"></a-light>
     <a-light type="point" intensity="2" position="2 4 4"></a-light>
 
-    <a-sound src="res/snd/backgroundnoise.wav" autoplay="true"
-             position="-3 1 -4"></a-sound>
+<!--    <a-sound src="res/snd/soledad.mp3" autoplay="true"-->
+<!--             position="-3 1 -4"></a-sound>-->
 
-    <a-text value="Wavin" color="#BBB"
-            position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+    <a-text value="https://github.com/Tangwego" color="#BBB"
+            position="-2 0.2 -3" scale="1.5 1.5 1.5">
+    </a-text>
   </a-scene>
-
   </body>
 </html>
