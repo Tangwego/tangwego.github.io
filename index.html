@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wavin's Home</title>
+    <meta name="description" content="wavin's home">
+    <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  </head>
+  <body>
+  <a-scene background="color: red" transparent="true">
+    <a-assets>
+      <img id="boxTexture" src="background.jpg">
+      <img id="skyTexture"
+           src="https://cdn.aframe.io/360-image-gallery-boilerplate/img/sechelt.jpg">
+      <img id="groundTexture" src="https://cdn.aframe.io/a-painter/images/floor.jpg">
+      <audio id="soundAudio" src="https://cdn.aframe.io/basic-guide/audio/backgroundnoise.wav" autoplay
+             preload loop></audio>
+    </a-assets>
+    <a-box src="#boxTexture" position="0 2 -5" rotation="0 45 45" scale="2 2 2">
+      <a-animation attribute="position" to="0 4 -5" direction="alternate" dur="2000"
+                   repeat="indefinite"></a-animation>
+    </a-box>
+    <a-sky src="#skyTexture"></a-sky>
+    <a-plane src="#groundTexture" rotation="-90 0 0" width="30" height="30"
+             repeat="10 10"></a-plane>
+    <a-light type="ambient" color="#445451"></a-light>
+    <a-light type="point" intensity="2" position="2 4 4"></a-light>
+
+    <a-camera>
+      <a-cursor></a-cursor>
+    </a-camera>
+
+    <a-sound src="#soundAudio" autoplay="true"
+             position="-3 1 -4"></a-sound>
+
+    <a-text value="Wavin" color="#BBB"
+            position="-0.9 0.2 -3" scale="1.5 1.5 1.5"></a-text>
+  </a-scene>
+
+  </body>
+</html>
