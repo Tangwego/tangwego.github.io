@@ -24,7 +24,7 @@
     window.getCamera = function(callback){
         let getUserMedia = navigator.mediaDevices.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.getUserMedia;
         let constraints = { video:{width:480,height:320}, audio: true };
-        getUserMedia(constraints, function(stream){
+        navigator.mediaDevices.getUserMedia(constraints, function(stream){
             if(typeof callback === 'function'){
                 callback('', stream, constraints);
             }
