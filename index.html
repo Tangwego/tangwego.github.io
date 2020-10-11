@@ -4,16 +4,24 @@
     <meta charset="utf-8">
     <title>Wavin's Home</title>
     <meta name="description" content="wavin's home">
+      <link rel="stylesheet" href="css/index.css"/>
   </head>
   <body>
-    <video autoplay id="webcam" style="background-color: black;">
-      您的浏览器不支持video标签
-   </video>
-    <div style="width:100%;">
-      <button onclick="screenShare();">点击分享屏幕</button>
-      <button onclick="cameraShare();">点击打开摄像头</button>
+    <div id="container">
+        <video autoplay id="webcam">
+            您的浏览器不支持video标签
+        </video>
+        <div style="width:100%;">
+            <button onclick="screenShare();">点击分享屏幕</button>
+            <button onclick="closeScreenShare();">点击关闭屏幕分享</button>
+        </div>
+
+        <div style="width:100%;">
+            <button onclick="cameraShare();">点击打开摄像头</button>
+            <button onclick="closeCameraShare();">点击关闭摄像头</button>
+        </div>
     </div>
-    <script src="/js/jquery-3.5.1/jquery.min.js"></script>
+    <script src="js/jquery-3.5.1/jquery.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

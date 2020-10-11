@@ -1,0 +1,19 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+#container{
+    margin: 0px auto;
+    padding: 0px;
+    width: 500px;
+    height: 500px;
+    text-align: center;
+
+}
+
+#webcam{
+    width: 683px;
+    height: 384px;
+    background-color: black;
+}
